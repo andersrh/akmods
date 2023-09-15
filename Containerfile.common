@@ -24,6 +24,8 @@ rpm-ostree override remove kernel kernel-core kernel-modules kernel-modules-core
 # install kernel headers
 rpm-ostree install kernel-cachyos-lts-headers kernel-cachyos-lts-devel binutils
 
+RUN ln -s /usr/bin/ld.bfd /usr/bin/ld
+
 # files for akmods
 COPY ublue-os-akmods-addons.spec /tmp/ublue-os-akmods-addons/ublue-os-akmods-addons.spec
 ADD https://copr.fedorainfracloud.org/coprs/ublue-os/akmods/repo/fedora-${FEDORA_MAJOR_VERSION}/ublue-os-akmods-fedora-${FEDORA_MAJOR_VERSION}.repo \

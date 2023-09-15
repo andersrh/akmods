@@ -25,6 +25,8 @@ rpm-ostree override remove kernel kernel-core kernel-modules kernel-modules-core
 # install kernel headers
 rpm-ostree install kernel-cachyos-lts-headers kernel-cachyos-lts-devel binutils
 
+RUN ln -s /usr/bin/ld.bfd /usr/bin/ld
+
 # files for nvidia
 COPY ublue-os-nvidia-addons.spec /tmp/ublue-os-nvidia-addons/ublue-os-nvidia-addons.spec
 ADD https://nvidia.github.io/nvidia-docker/rhel9.0/nvidia-docker.repo \
