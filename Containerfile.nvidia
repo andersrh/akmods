@@ -23,7 +23,7 @@ rpm-ostree cliwrap install-to-root / && \
 # Replace the kernel, kernel-core and kernel-modules packages.
 rpm-ostree override remove kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra --install kernel-cachyos-lts && \
 # install kernel headers
-rpm-ostree install kernel-cachyos-lts-headers && \
+rpm-ostree install kernel-cachyos-lts-headers
 
 # files for nvidia
 COPY ublue-os-nvidia-addons.spec /tmp/ublue-os-nvidia-addons/ublue-os-nvidia-addons.spec
