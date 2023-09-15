@@ -1,8 +1,6 @@
 name: build-ublue
 on:
   pull_request:
-  push:
-    branches: [ "main", "testing"  ]
   merge_group:
   schedule:
     - cron: '0 6 * * *'  # 6am everyday (1h after 'config')
