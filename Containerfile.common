@@ -22,7 +22,7 @@ cd /tmp && \
 # Replace the kernel, kernel-core and kernel-modules packages.
 rpm-ostree override remove kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra --install kernel-cachyos-lts && \
 # install kernel headers
-rpm-ostree install kernel-cachyos-lts-headers kernel-cachyos-lts-devel
+rpm-ostree install kernel-cachyos-lts-headers kernel-cachyos-lts-devel binutils
 
 # files for akmods
 COPY ublue-os-akmods-addons.spec /tmp/ublue-os-akmods-addons/ublue-os-akmods-addons.spec
